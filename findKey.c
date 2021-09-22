@@ -9,19 +9,19 @@ Output : Index position : 3
 
 #include <stdio.h>
 
-int findNumber(int *arr, int st, int end, int key)
+int findNumber(int *arr, int low, int high, int key)
 {
-    if(st == end){
-        if(arr[st] == key)
-            return st;
+    if(low == high){
+        if(arr[low] == key)
+            return low;
         return -1;
     }
-    int mid = (st + end)/2;
-    int j = findNumber(arr, st, mid, key);
+    int mid = (low + high)/2;
+    int j = findNumber(arr, low, mid, key);
     if(j != -1)
         return j;
     
-    int k = findNumber(arr, mid+1, end, key);
+    int k = findNumber(arr, mid+1, high, key);
     if(k != -1)
         return k;
     return -1;
