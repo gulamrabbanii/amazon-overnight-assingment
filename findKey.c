@@ -16,7 +16,7 @@ int findNumber(int *arr, int low, int high, int key)
             return low;
         return -1;
     }
-    int mid = (low + high)/2;
+    int mid = low + (high - low)/2;
     int j = findNumber(arr, low, mid, key);
     if(j != -1)
         return j;
