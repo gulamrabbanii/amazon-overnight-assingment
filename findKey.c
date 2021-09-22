@@ -1,3 +1,12 @@
+//  In an array that is sorted, but rotated, find the position of the given number in O(log n).
+
+/* 
+eg:
+Input array : [3, 10, 20, -3, 2]
+Input number : -3
+Output : Index position : 3
+*/
+
 #include <stdio.h>
 
 int findNumber(int *arr, int st, int end, int key)
